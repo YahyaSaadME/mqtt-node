@@ -1,0 +1,21 @@
+{
+  "name": "mqtt-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "aedes": "^0.51.3",
+    "aedes-packet": "^3.0.0",
+    "aedes-persistence": "^9.1.2",
+    "mqtt": "^5.10.1",
+    "redis": "^4.7.0",
+    "ws": "^8.18.0"
+  }
+}
