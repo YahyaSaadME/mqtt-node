@@ -3,12 +3,14 @@ const aedes = require('aedes')();
 const net = require('net');
 const ws = require('ws'); // For WebSocket support
 
-// TCP server for MQTT
-const port = 1883;
+// Use the PORT environment variable provided by Render
+const port = process.env.PORT || 1883;
 const server = net.createServer(aedes.handle);
+console.log(process.env.WS_PORT);
+console.log(process.env.PORT);
 
 // WebSocket server (Optional for WebSocket connections)
-const wsPort = 8888;
+const wsPort = process.env.WS_PORT || 8888; // Optional if you also want a WS server
 const httpServer = require('http').createServer();
 const wsServer = new ws.Server({ server: httpServer });
 
